@@ -1,0 +1,29 @@
+.ctn-up{
+    width: 100%;
+}
+.item{
+    margin-top: 10px;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #D10024;
+    border: none;
+    border-radius: 40px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  .primary-btn:hover, .primary-btn:focus {
+    opacity: 0.9;
+    color: #FFF;
+  }
+
+  p{
+      font-size: 20px;
+  }
