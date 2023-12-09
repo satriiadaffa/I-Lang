@@ -1,19 +1,254 @@
 .card {
-    margin: 100px;
-    border-color:#D10024 ;
+    margin: 20px 15px 30px 15px;
     border: 1px;
-    background-color: #15161D;
+    background: -webkit-linear-gradient( 136deg, rgb(24, 24, 24) 0%, rgb(48, 48, 48) 100%);
     padding:20px;
-    border-radius:10px;
+    border-radius:5px;
     display: flex;
 
+    transition: box-shadow .3s;
+
 }
+
+.a-ttgkm a{ 
+    font-size:25px;
+}
+
+.box {
+    transition: box-shadow .3s;
+    width: 300px;
+    height: 500px;
+    margin: 50px;
+    border-radius:10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    float: left;
+    
+    
+  }
+  .box:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
+
+.card:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.list-item{
+    display: inline-block;
+}
+
+.evn-display{
+    display: flex;
+}
+
+.act-list {
+    margin-left:70px;
+    margin-top:20px;
+}
+
+.act-list-akun {
+    display: flex;
+    margin-top:20px;
+}
+
+.edit-btn {
+    
+    padding: 12px 38px 14px 37px;
+    background: -webkit-linear-gradient( 136deg, rgb(247, 186, 63) 0%, rgb(250, 217, 159) 100%);
+    border: none;
+    font-size:15px;
+    border-radius: 40px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  .edit-btn:hover, .edit-btn:focus {
+    opacity: 0.9;
+    color: #FFF;
+  }
+
+  .delete-btn {
+    
+    padding: 12px 30px;
+    background: -webkit-linear-gradient( 136deg, rgb(193, 50, 50) 0%, rgb(200, 118, 118) 100%);
+    border: none;
+    font-size:15px;
+    border-radius: 40px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+
+    margin-top: 20px;
+  }
+  
+  .delete-btn:hover, .delete-btn:focus {
+    opacity: 0.9;
+    color: #FFF;
+  }
+
+  .edit-btn-akun {
+    
+    padding: 12px 38px 12px 37px;
+    background: -webkit-linear-gradient( 136deg, rgb(247, 186, 63) 0%, rgb(250, 217, 159) 100%);
+    border: none;
+    font-size:15px;
+    border-radius: 40px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+  }
+  
+  .edit-btn-akun:hover, .edit-btn-akun:focus {
+    opacity: 0.9;
+    color: #FFF;
+  }
+
+  .delete-btn-akun {
+    
+    padding: 12px 30px;
+    background: -webkit-linear-gradient( 136deg, rgb(193, 50, 50) 0%, rgb(200, 118, 118) 100%);
+    border: none;
+    font-size:15px;
+    border-radius: 40px;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+
+    margin-left: 20px;
+  }
+  
+  .delete-btn-akun:hover, .delete-btn-akun:focus {
+    opacity: 0.9;
+    color: #FFF;
+  }
 .card-title{
     margin: 10px;
+    margin-left: 0px;
     font-family: 'Montserrat', sans-serif;
-    color: #fff;
+    color: rgb(21, 21, 21);
     font-size: 25px;
 }
 img {
-    border-radius: 10px;
+    border-radius: 5px;
 }
+#body {
+    display: flex;
+  justify-content: center;
+}
+.card-text{
+    color:rgb(20, 20, 20);
+}
+
+.stretched-link {
+    text-decoration: none;
+}
+
+.list-group-item {
+    font-size:16px;
+}
+
+.evn-title{
+    font-size:22px;
+    margin-bottom: 10px;
+}
+
+.list-group p {
+    font-size:18px;
+}
+
+.list-group h5 {
+    font-size:20px;
+}
+
+.head h3 {
+    font-size:25px;
+}
+
+.container h1 {
+    font-size:30px;
+}
+
+.container h2 {
+    font-size:25px;
+}
+
+.container  p{
+    font-size:16px;
+}
+
+.container  li{
+    font-size:16px;
+}
+
+.par-tit h3 {
+    font-size:25px;
+}
+
+.container h4 {
+    font-size:20px;
+}
+
+.container h2 {
+    font-size:30px;
+}
+
+.container a {
+    text-decoration:none;
+    color:rgb(204, 89, 230);
+}
+
+.container a:hover {
+    color:rgb(167, 17, 200);
+}
+
+#card {
+    transition: box-shadow .3s;
+}
+
+#card hr{
+    color:rgb(46, 46, 46);
+}
+
+#card:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+#card p{
+    color:rgb(46, 46, 46);
+    font-size:16px;
+}
+
+
+.text-center h3 {
+    font-size:25px;
+}
+
+.text-center a{
+    color:rgb(190, 93, 209);
+    font-size:16px;
+    text-decoration:none;
+}
+
+.text-center a:hover{
+    color:rgb(229, 136, 247);
+}
+
+.del-acc button{
+    display:flex;
+    margin-left:20px;
+}
+

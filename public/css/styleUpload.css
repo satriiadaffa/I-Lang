@@ -5,6 +5,16 @@
     margin-top: 10px;
 }
 
+.container form .form-control {
+    font-size: 14px;
+}
+#desc {
+    height: 400px;
+    width: 400px;
+
+}
+
+
 .primary-btn {
     display: inline-block;
     padding: 12px 30px;
@@ -27,3 +37,16 @@
   p{
       font-size: 20px;
   }
+
+  .item h5{
+      font-size:13px;
+      color: rgba(0, 0, 0, 0.579);
+  }
+
+  label {
+      font-size:18px;
+  }
+
+.item label {
+    font-size:12px;
+}

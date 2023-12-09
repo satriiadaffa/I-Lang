@@ -14,8 +14,24 @@ class WebController extends Controller
         return view ('upload');
     }
 
-    public function ViewHalamanEvent(){
-        return view ('halamanEvent');
+    public function TentangKami(){
+        return view ('TentangKami');
+    }
+
+    public function Syarat(){
+        return view ('Syarat');
+    }
+
+    public function HubungiKami(){
+        return view ('HubungiKami');
+    }
+
+    public function Kebijakan(){
+        return view ('Kebijakan');
+    }
+
+    public function Bantuan(){
+        return view ('Bantuan');
     }
 
     public function ViewLogin(){
@@ -24,5 +40,13 @@ class WebController extends Controller
 
     public function ViewRegistrasi(){
         return view ('registrasi');
+    }
+
+    public function show(){
+        return view ('akun');
+    }
+
+    public function ViewEvent(){
+        return view ('event');
     }
 }

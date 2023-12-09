@@ -2,16 +2,17 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Registrasi</title>
+	<title>@yield('title', 'i-Lang - Masuk')</title>
+	<link rel="shortcut icon" href="{{url('img/favicon.png')}}">
 	<!-- Mobile Specific Metas -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Font-->
 	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
 	<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
-	<!-- Jquery -->
-	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
 	<!-- Main Style Css -->
     <link rel="stylesheet" href="css/stylelogin.css"/>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
 </head>
 <body class="form-v7">
 	<div class="page-content">
@@ -22,60 +23,41 @@
 				<p class="text-2">
 					Kebijakan privasi & Ketentuan layanan</p>
 			</div>
-			<form class="form-detail" action="/mahasiswa" method="post" id="myform">
+			<form class="form-detail" action="{{ url('/login')}}" method="POST" id="myform">
+				@csrf
+				@if (session()->has('loginError'))
+				<div class="alert alert-danger" role="alert">
+					{{session('loginError')}}
+					<button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close">
+
+					</button>
+				  </div>
+					
+				@endif
 				<div class="form-row">
-					<label for="username">Nama Pengguna</label>
-					<input type="text" name="username" id="username" class="input-text">
+					<label for="username">E-Mail</label>
+					<input type="text" name="email" id="email" class="form-control 
+					@error('email') is-invalid @enderror">
+					@error('email')
+                        <div class="text-danger" id='error'>{{ $message }}</div>
+                    @enderror
 				</div>
 				<div class="form-row">
 					<label for="password">Kata Sandi</label>
-					<input type="password" name="password" id="password" class="input-text" required>
+					<input type="password" name="password" id="password" class="form-control 
+					@error('password') is-invalid @enderror">
+					@error('password')
+                        <div class="text-danger" id='error'>{{ $message }}</div>
+                    @enderror
 				</div>
 				<div class="form-row-last text-center">
 					<input type="submit" name="register" class="register" value="Masuk">
+					<p>Belum Punya Akun?<a href="/registrasi">Daftar Disini</a></p>
 
 				</div>
 			</form>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-	<script>
-		// just for the demos, avoids form submit
-		jQuery.validator.setDefaults({
-		  	debug: true,
-		  	success:  function(label){
-        		label.attr('id', 'valid');
-   		 	},
-		});
-		$( "#myform" ).validate({
-		  	rules: {
-			    your_email: {
-			      	required: true,
-			      	email: true
-			    },
-			    password: "required",
-		    	comfirm_password: {
-		      		equalTo: "#password"
-		    	}
-		  	},
-		  	messages: {
-		  		username: {
-		  			required: "Please enter an username"
-		  		},
-		  		your_email: {
-		  			required: "Please provide an email"
-		  		},
-		  		password: {
-	  				required: "Please provide a password"
-		  		},
-		  		comfirm_password: {
-		  			required: "Please provide a password",
-		      		equalTo: "Wrong Password"
-		    	}
-		  	}
-		});
-	</script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+	
+</body>
 </html>
